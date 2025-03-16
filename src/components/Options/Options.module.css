@@ -4,9 +4,17 @@
   justify-content: center;
   gap: 30px;
   padding: 2em;
+  flex-wrap: wrap;
 }
 
 .user_button {
+  flex: 1 1 75px; /* Мінімальна ширина кожного елементу 150px */
+  /*  Параметри:
+    1 (grow): Елемент може розширюватися, щоб заповнити вільний простір.
+    1 (shrink): Елемент може стискатися, якщо місця недостатньо.
+    75px (basis): Мінімальна ширина кожного елементу. 
+*/
+
   font-size: 14px;
   letter-spacing: -0.02em;
   color: #fafafa;
