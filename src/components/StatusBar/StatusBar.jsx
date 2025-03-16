@@ -6,7 +6,7 @@ export default function StatusBar({ name, argument, total }) {
     <div className={css.element_container}>
       <div className={css.barLable}>
         <p>{name}:</p>
-        <p clasName={css.feedbackCount}>{argument}</p>
+        <p className={css.feedbackCount}>{argument}</p>
       </div>
       <div className={css.status_bar_container}>
         <div className={css.status_bar_progress} style={{ width: `${total == 0 ? 0 : argumentPer}%` }}>

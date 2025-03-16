@@ -12,11 +12,11 @@ export default function Feedback({ feedback, total }) {
       <StatusBar name="Bad" argument={bad} total={total} />
       <div className={css2.barLable}>
         <p className={css.statistic_text}>Total:</p>
-        <p clasName={css2.feedbackCount}>{total}</p>
+        <p className={css2.feedbackCount}>{total}</p>
       </div>
       <div className={css2.barLable}>
         <p className={css.statistic_text}>Positive:</p>
-        <p clasName={css2.feedbackCount}>{Math.round((good / total) * 100)}%</p>
+        <p className={css2.feedbackCount}>{Math.round((good / total) * 100)}%</p>
       </div>
     </div>
   );

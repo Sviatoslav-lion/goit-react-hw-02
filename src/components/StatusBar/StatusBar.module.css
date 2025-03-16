@@ -14,8 +14,6 @@
 .feedbackCount {
   display: flex;
   justify-content: center;
-  text-align: center;
-  align-items: center;
 }
 .status_bar_container {
   position: relative;

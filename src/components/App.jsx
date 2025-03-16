@@ -86,7 +86,7 @@ function App() {
   }, [feedback]); //встановлюємо залежність еффекту, викликається кожного разу, коли змінюється feedback
 
   return (
-    <div class>
+    <div>
       <Description />
       <Options onFeedbackClick={updateFeedback} onReset={clickReset} statusResBut={totalFeedback > 0} />
       <div className="statistic_box">
