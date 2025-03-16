@@ -1,0 +1,48 @@
+.element_container {
+  display: flex;
+  flex-direction: row;
+}
+.barLable {
+  width: 30%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+
+.feedbackCount {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.status_bar_container {
+  position: relative;
+  width: 70%;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.status_bar_progress {
+  height: 100%;
+  background-color: #7dca24; /* Зелений прогрес */
+  transition: width 0.3s ease;
+}
+.barVal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  font-size: small;
+  font-weight: 400;
+  color: black;
+  transform: translate(-50%, -50%); /* Зміщуємо по центру */
+  font-size: 14px;
+  font-weight: bold;
+  pointer-events: none;
+}

@@ -1,0 +1,24 @@
+.feedback_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  padding: 2em;
+}
+
+.user_button {
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: border 300ms ease-in-out;
+}
+
+.user_button:hover {
+  box-shadow: 0px 0px 8px rgba(250, 250, 250, 0.4);
+  border-color: #fafafa;
+}
