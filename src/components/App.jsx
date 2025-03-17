@@ -5,6 +5,7 @@ import './App.css';
 import Description from '../components/Description/Description.jsx';
 import Options from '../components/Options/Options.jsx';
 import Feedback from '../components/Feedback/Feedback.jsx';
+import Notification from '../components/Notification/Notification.jsx'
 
 function App() {
   // Створюємо об'єкт для збереження станів
@@ -35,7 +36,9 @@ function App() {
     },
   );
 
+  // розраховуємо загальну кількість фідбеків
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+  const PerPositiveFeedback = Math.round((feedback.good / totalFeedback) * 100);
   // Оновлюємо змінені значення об'єкту feedback
 
   const updateFeedback = feedbackType => {
@@ -45,27 +48,6 @@ function App() {
       [feedbackType]: prevFeedback[feedbackType] + 1,
     }));
   };
-
-  // const clickGood = () => {
-  //   setFeedback(prevFeedback => ({
-  //     ...prevFeedback,
-  //     good: prevFeedback.good + 1,
-  //   }));
-  // };
-
-  // const clickNeutral = () => {
-  //   setFeedback(prevFeedback => ({
-  //     ...prevFeedback,
-  //     neutral: prevFeedback.neutral + 1,
-  //   }));
-  // };
-
-  // const clickBad = () => {
-  //   setFeedback(prevFeedback => ({
-  //     ...prevFeedback,
-  //     bad: prevFeedback.bad + 1,
-  //   }));
-  // };
 
   //Функція скидання кліків
   const clickReset = () => {
@@ -90,7 +72,7 @@ function App() {
       <Description />
       <Options onFeedbackClick={updateFeedback} onReset={clickReset} statusResBut={totalFeedback > 0} />
       <div className="statistic_box">
-        {totalFeedback > 0 ? <Feedback feedback={feedback} total={totalFeedback} /> : <p>No feedback yet</p>}
+        {totalFeedback > 0 ? <Feedback feedback={feedback} total={totalFeedback} PerPosFeed={PerPositiveFeedback}/> : <Notification/>}
       </div>
     </div>
   );
